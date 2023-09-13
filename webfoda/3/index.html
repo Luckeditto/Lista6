@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"   content="Leon Nascimento Moreira">
+    <meta name="author"   content="Lucas Danilo dos Santos Araújo">
+    <meta name="author"   content="Luis Eduardo Ribeiro Eça dos Santos">
+    <meta name="keyword" content="WEB 200027247 // 200027019 // 200026644">
+    <meta name="description" content="Atividade sobre Javascript">
+    <title>Javascript</title>
+    
+    
+    <script>
+        function getDataForm() {
+            var name = document.frm1.name.value;
+            var maritalStatus = document.frm1.select.value;
+            var ageRange = document.frm1.select2.value;
+
+            var concatened = document.getElementById('concatened');
+
+            concatened.innerText = name + " está " + maritalStatus + " e tem entre " + ageRange;
+
+        }
+    </script>
+</head>
+<body>
+    <form name="frm1" onsubmit="return false;">
+        name: <input type="text" name="name"> </p>
+        marital status: <select name="select">
+            <option value="Solteiro(a)">Solteiro(a)</option>
+            <option value="Casado(a)">Casado(a)</option>
+            <option value="Divorciado(a)">Divorciado(a)</option>
+            <option value="Vivuo(a)">Vivuo(a)</option>
+        </select> 
+    </p>
+    age range: <select name="select2" id="">
+        <option value="3 a 10 anos">3 a 10 anos</option>
+        <option value="11 a 25 anos">11 a 25 anos</option>
+        <option value="36 a 55 anos">36 a 55 anos</option>
+        <option value="56 a 100 anos">56 a 100 anos</option>
+    </select> 
+</p>
+    <input type= "submit" value="Enviar" onclick= "getDataForm()">
+    </form>
+    <p id="concatened"></p>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"   content="Leon Nascimento Moreira">
+    <meta name="author"   content="Lucas Danilo dos Santos Araújo">
+    <meta name="author"   content="Luis Eduardo Ribeiro Eça dos Santos">
+    <meta name="keyword" content="WEB 200027247 // 200027019 // 200026644">
+    <meta name="description" content="Atividade sobre Javascript">
+    <title>Javascript</title>
+    
+    
+    <script>
+        function mostrarFaixa() {
+            var idade = document.frm1.idade.value;
+            var resultado;
+
+            if(idade >= 3 && idade <=10){
+                resultado = "3 a 10 anos";
+            } else if (idade >= 11 && idade <= 25){
+                resultado = "11 a 25 anos";
+            }else if (idade >= 36 && idade <= 55){
+                resultado = "36 a 55 anos";
+            }else if (idade >= 56 && idade <= 100){
+                resultado = "56 a 100 anos";
+            }
+
+            document.getElementById('resultado').innerHTML = resultado;
+            
+        }
+    </script>
+</head>
+<body>
+
+    <form name="frm1" onsubmit="return false;">
+        idade: <input type="text" name="idade"> </p>
+    <input type= "submit" value="Enviar" onclick= "mostrarFaixa()">
+    </form>
+    <p id="resultado"></p>
+
+    
+</body>
+</html>

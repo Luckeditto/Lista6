@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"   content="Leon Nascimento Moreira">
+    <meta name="author"   content="Lucas Danilo dos Santos Araújo">
+    <meta name="author"   content="Luis Eduardo Ribeiro Eça dos Santos">
+    <meta name="keyword" content="WEB 200027247 // 200027019 // 200026644">
+    <meta name="description" content="Atividade sobre Javascript">
+    <title>Javascript - DOM</title>
+    
+    
+    <script>
+        function calculateIMC() {
+            var weight = document.frm1.weight.value;
+            var height = document.frm1.height.value;
+            var imc = weight / (height * height)
+            var resultado;
+
+            if (imc >= 16.00 && imc <= 16.90) {
+                resultado = "Very underweight";
+            } else if (imc > 17.00 && imc <= 18.40){
+                resultado = "Underweight";
+            } else if (imc > 18.50 && imc <= 24.90){
+                resultado = "weight normal";
+            } else if (imc > 25.00 && imc <= 29.90){
+                resultado = "overweight";
+            } else if (imc > 30.00){
+                resultado = "Obesity";
+            }
+
+            document.getElementById('show').innerText = resultado;
+        }
+    </script>
+</head>
+<body>
+    <form name="frm1" onsubmit="return false;">
+        weight: <input type="text" name="weight"> </p>
+        height: <input type="text" name="height"> </p>
+    <input type= "submit" value="Enviar" onclick= "calculateIMC()">
+    </form>
+    <p id="show"></p>
+</body>
+</html>

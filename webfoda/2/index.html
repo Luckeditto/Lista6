@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author"   content="Leon Nascimento Moreira">
+    <meta name="author"   content="Lucas Danilo dos Santos Araújo">
+    <meta name="author"   content="Luis Eduardo Ribeiro Eça dos Santos">
+    <meta name="keyword" content="WEB 200027247 // 200027019 // 200026644">
+    <meta name="description" content="Atividade sobre Javascript">
+    <title>Javascript</title>
+    
+    
+    <script>
+        function validarFormulario(){
+            var login = document.frm1.login.value;
+            var password = document.frm1.senha.value;
+
+            if(login == ""){
+                alert("login is empty")
+            }
+
+            if(password == ""){
+                alert("password is empty")
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <form name="frm1" onsubmit="return false;">
+        login: <input type="text" name="login"> </p>
+        password: <input type="text" name="password"> </p>
+    <input type= "submit" value="Enviar" onclick= "validarFormulario()">
+    </form>
+</body>
+</html>
